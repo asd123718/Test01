@@ -170,6 +170,10 @@ main {
   gap: 8px;
 }
 
+.overlay[hidden] {
+  display: none !important;
+}
+
 .overlay-kicker {
   margin: 0;
   color: var(--ember);
