@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <meta name="theme-color" content="#0a1018" />
+  <title>无尽寒冬 | 最后的幸存者电台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="mast">
+    <p class="callsign">FREQ 7.12 · LAST SURVIVOR BROADCAST</p>
+    <h1>无尽寒冬</h1>
+    <p class="sub">灾难从未结束。这是这台虚拟机上的公开电台——你的设备可以直接打开。</p>
+    <div class="stats">
+      <span>气温 −48°C</span>
+      <span>能见度 12%</span>
+      <span id="uptime">信号在线</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel game-panel">
+      <div class="panel-head">
+        <h2>废墟试炼</h2>
+        <p>在浏览器里活下来。手机用左侧摇杆移动，右侧开火。</p>
+      </div>
+      <div class="stage">
+        <canvas id="arena" width="720" height="480"></canvas>
+        <div id="hud" class="hud">
+          <div class="bar"><i id="hp"></i></div>
+          <span id="score">0s</span>
+          <span id="event">等待灾难…</span>
+        </div>
+        <div id="overlay" class="overlay">
+          <p class="overlay-kicker">2012 之后</p>
+          <h3>极夜仍未过去</h3>
+          <p>感染者正在靠近。尽量活得更久。</p>
+          <button type="button" id="start">进入废墟</button>
+        </div>
+        <div id="stick" class="stick" hidden>
+          <div class="knob"></div>
+        </div>
+        <button type="button" id="fire" class="fire" hidden>开火</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>轮番降临的灾难</h2>
+        <p>完整 PC 版用 Pygame 运行，这里是同一世界的公开入口。</p>
+      </div>
+      <ul class="disasters">
+        <li><strong>超级暴风雪</strong><span>能见度骤降，体温持续流失</span></li>
+        <li><strong>连环地震</strong><span>地壳撕裂从未停止</span></li>
+        <li><strong>无尽洪涝</strong><span>海平面仍在上升</span></li>
+        <li><strong>火山灰幕</strong><span>天空被灰烬遮蔽</span></li>
+        <li><strong>极寒冻结</strong><span>暴露在外将迅速失温</span></li>
+        <li><strong>陨石雨</strong><span>近地轨道碎片不断坠落</span></li>
+        <li><strong>剧毒迷雾</strong><span>生化泄漏在废墟中蔓延</span></li>
+        <li><strong>太阳风暴</strong><span>电磁设备失灵，辐射增强</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>托管于 Cursor Cloud Agent 虚拟机 · 会话结束后此链接会失效</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
