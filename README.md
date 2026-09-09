@@ -68,3 +68,7 @@ requirements.txt
 ## 许可证
 
 MIT License
+
+## 同仓库长篇
+
+二次创作长篇《群星未央：黑暗森林联合体》见 `novel/`。正文约二十万汉字，生成方式见 `novel/README.md`。
