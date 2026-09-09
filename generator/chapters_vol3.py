@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-from chapters_vol1 import ch, V3
+try:
+    from .chapters_vol1 import ch, V3
+except ImportError:
+    from chapters_vol1 import ch, V3
 
 CHAPTERS = [
     ch(

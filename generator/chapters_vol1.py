@@ -1,20 +1,14 @@
 # -*- coding: utf-8 -*-
 """五十章独立剧情核。每章事件、台词、文献互不复用。"""
 
+try:
+    from .chapter import Chapter
+except ImportError:
+    from chapter import Chapter
+
 
 def ch(num, title, vol, time, epi, pov, places, beats, talks, doc, extras=None):
-    d = {
-        "num": num,
-        "title": title,
-        "vol": vol,
-        "time": time,
-        "epi": epi,
-        "pov": pov,
-        "places": places,
-        "beats": beats,
-        "talks": talks,
-        "doc": doc,
-    }
+    d = Chapter(num, title, vol, time, epi, pov, places, beats, talks, doc).to_dict()
     if extras:
         d.update(extras)
     return d
@@ -24,9 +18,8 @@ V1 = "卷一 裂隙"
 V2 = "卷二 初遇"
 V3 = "卷三 磨合"
 V4 = "卷四 暗流"
-V5 = "卷五 入盟"
-V6 = "卷六 网络"
-V7 = "卷七 田园"
+V5 = "卷五 分类"
+V6 = "卷六 点名"
 
 
 CHAPTERS = [

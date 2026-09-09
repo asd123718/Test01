@@ -1,0 +1,13 @@
+[project]
+name = "qunxing-weiyang"
+version = "0.2.0"
+description = "程序化长篇同人《群星未央：黑暗森林联合体》生成器"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[project.scripts]
+qunxing-weiyang = "generator.main:main"
+
+[tool.setuptools.packages.find]
+include = ["generator*"]
